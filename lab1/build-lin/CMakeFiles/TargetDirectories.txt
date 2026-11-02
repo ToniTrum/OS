@@ -1,0 +1,3 @@
+/home/tonitrum/Projects/Work/OS/lab1/build-lin/CMakeFiles/lab1.dir
+/home/tonitrum/Projects/Work/OS/lab1/build-lin/CMakeFiles/edit_cache.dir
+/home/tonitrum/Projects/Work/OS/lab1/build-lin/CMakeFiles/rebuild_cache.dir
