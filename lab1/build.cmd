@@ -17,7 +17,7 @@ if %ERRORLEVEL% neq 0 (
 popd
 
 echo == [2/3] CMake configuration ==
-cmake -S "%SCRIPT_DIR%." -B "%BUILD_DIR%"
+cmake -S "%SCRIPT_DIR%." -B "%BUILD_DIR%" -G "MinGW Makefiles"
 if %ERRORLEVEL% neq 0 (
     echo [ERROR] CMake configuration failed.
     exit /b %ERRORLEVEL%
@@ -31,5 +31,5 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo [OK] Build completed successfully!
-echo ^> Executable is located in: "%BUILD_DIR%"
+echo ^> Executable is located in: %BUILD_DIR%
 endlocal
