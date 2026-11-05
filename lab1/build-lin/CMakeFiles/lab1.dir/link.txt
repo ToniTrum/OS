@@ -1,1 +1,0 @@
-/usr/bin/cc -Wl,--dependency-file=CMakeFiles/lab1.dir/link.d CMakeFiles/lab1.dir/main.c.o CMakeFiles/lab1.dir/hello_world.c.o -o lab1
