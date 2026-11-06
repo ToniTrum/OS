@@ -1,6 +1,7 @@
-#include "../lib/process_run.h"
 #include <stdlib.h>
 #include <string.h>
+
+#include "../lib/process_run.h"
 
 static char* format_command_line(char *const argv[]) {
     size_t length = 0;
@@ -11,13 +12,14 @@ static char* format_command_line(char *const argv[]) {
 
     char *command_line = (char*)malloc(length + 1);
     if (!command_line) return NULL;
+    
     command_line[0] = '\0';
-
     for (int i = 0; argv[i] != NULL; ++i) {
         strcat(command_line, "\"");
         strcat(command_line, argv[i]);
         strcat(command_line, "\" ");
     }
+    
     return command_line;
 }
 
@@ -30,9 +32,10 @@ bool process_run(const char *path, char *const argv[], process_handle_t *out_han
     if (!command_line) return false;
 
     STARTUPINFOA si;
-    PROCESS_INFORMATION pi;
     ZeroMemory(&si, sizeof(si));
     si.cb = sizeof(si);
+    
+    PROCESS_INFORMATION pi;
     ZeroMemory(&pi, sizeof(pi));
 
     BOOL ok = CreateProcessA(

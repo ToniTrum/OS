@@ -20,6 +20,5 @@ target_include_directories(process_runner PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/lib
 )
 
-# Тестовая утилита
 add_executable(lab2 main.c)
 target_link_libraries(lab2 PRIVATE process_runner)

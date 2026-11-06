@@ -1,6 +1,7 @@
-#include "../lib/process_run.h"
 #include <unistd.h>
 #include <stdio.h>
+
+#include "../lib/process_run.h"
 
 bool process_run(const char *path, char *const argv[], process_handle_t *out_handle) {
     if (!path || !argv || !out_handle) {
