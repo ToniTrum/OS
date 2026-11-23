@@ -1,5 +1,5 @@
-#ifndef PROCESS_RUN_H
-#define PROCESS_RUN_H
+#ifndef PROCESS_RUNNER_H
+#define PROCESS_RUNNER_H
 
 #include <stdbool.h>
 
@@ -14,5 +14,6 @@
 #endif
 
 bool process_run(const char *path, char *const argv[], process_handle_t *out_handle);
+bool process_wait(process_handle_t handle, int *out_exit_code);
 
-#endif // PROCESS_RUN_H
+#endif // PROCESS_RUNNER_H

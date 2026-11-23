@@ -1,4 +1,4 @@
-#include "../lib/process_wait.h"
+#include "process_runner.h"
 
 bool process_wait(process_handle_t handle, int *out_exit_code) {
     if (handle == INVALID_PROC_HANDLE || !out_exit_code) {

@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-#include "lib/process_run.h"
-#include "lib/process_wait.h"
+#include "process_runner.h"
 
 int main(void) {
     process_handle_t handle = INVALID_PROC_HANDLE;
