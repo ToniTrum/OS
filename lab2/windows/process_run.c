@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "process_runner.h"
+#include "process.h"
 
 static char* format_command_line(char *const argv[]) {
     size_t length = 0;

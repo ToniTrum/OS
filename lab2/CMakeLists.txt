@@ -3,7 +3,6 @@ project(lab2 C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
-
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if(WIN32)
@@ -18,19 +17,19 @@ else()
     )
 endif()
 
-add_library(process_runner STATIC ${LIB_SOURCES})
+add_library(process STATIC ${LIB_SOURCES})
 
-target_include_directories(process_runner PUBLIC
+target_include_directories(process PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
 
 add_executable(lab2 main.c)
-target_link_libraries(lab2 PRIVATE process_runner)
+target_link_libraries(lab2 PRIVATE process)
 
-install(TARGETS process_runner
+install(TARGETS process
     ARCHIVE DESTINATION lib
 )
-install(FILES include/process_runner.h
+install(FILES include/process.h
     DESTINATION include
 )
